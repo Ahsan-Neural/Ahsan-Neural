@@ -1,9 +1,10 @@
 
+
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Teaching%20Machines%20to%20See&descAlignY=60&descColor=00D9FF"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&font=Raleway"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+%7C+Machine+Learning+%7C+NLP;Kaggle+Datasets+Grandmaster+%26+Notebooks+Master;Projects+in+progress%2C+career+loading...+%F0%9F%9A%80" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+Specialist;ML+%26+NLP+Enthusiast;Kaggle+Datasets+Grandmaster" alt="Typing SVG" />
 
 <br/>
 
@@ -128,16 +129,185 @@
 
 <div align="center">
 
-```
-May   Jun   Jul   Aug   Sep   Oct   Nov   Dec   Jan   Feb   Mar   Apr
-·  ·  ·  ·  ·  ·  ●  ·  ·  ·  ·  ●  ·  ●  ●  ●●●●  ●●●●  ●●●●  ●●●●  ●  ·
-·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ●  ·  ·  ·  ●●●●  ●●●●  ●●●●  ●●●●  ●●●  ·  ·
-·  ·  ·  ·  ●  ·  ●  ·  ·  ●  ●  ·  ·  ●●●●  ●●●●  ●●●●  ●●●●  ●●●●  ·  ·  ·
-```
+<canvas id="snakeCanvas" width="800" height="200" style="border: 2px solid #00D9FF; border-radius: 8px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); display: block; margin: 20px auto; box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);"></canvas>
 
-> Peak activity: **December 2025 — March 2026**
+<p style="color: #00D9FF; font-family: 'Courier New', monospace; font-size: 14px; margin-top: 10px;">
+  🐍 <b>Peak Activity: December 2025 — March 2026</b> | Interactive Snake showing growth trajectory
+</p>
 
 </div>
+
+<script>
+// Snake Game - Kaggle Activity Visualization
+const canvas = document.getElementById('snakeCanvas');
+const ctx = canvas.getContext('2d');
+
+const gridSize = 20;
+const tileCount = canvas.width / gridSize;
+
+let snake = [{x: 5, y: 5}];
+let food = {x: 15, y: 10};
+let dx = 1;
+let dy = 0;
+let score = 0;
+let gameActive = true;
+
+// Color scheme matching your README
+const colors = {
+  bg: '#0a0a0a',
+  snake: '#00D9FF',
+  snakeHead: '#00FF88',
+  food: '#FFD700',
+  grid: '#1a1a2e',
+  text: '#00D9FF'
+};
+
+function drawGrid() {
+  ctx.fillStyle = colors.bg;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+  ctx.strokeStyle = colors.grid;
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i <= tileCount; i++) {
+    ctx.beginPath();
+    ctx.moveTo(i * gridSize, 0);
+    ctx.lineTo(i * gridSize, canvas.height);
+    ctx.stroke();
+    
+    ctx.beginPath();
+    ctx.moveTo(0, i * gridSize);
+    ctx.lineTo(canvas.width, i * gridSize);
+    ctx.stroke();
+  }
+}
+
+function drawSnake() {
+  snake.forEach((segment, index) => {
+    if (index === 0) {
+      // Head with glow effect
+      ctx.fillStyle = colors.snakeHead;
+      ctx.shadowColor = 'rgba(0, 255, 136, 0.8)';
+      ctx.shadowBlur = 10;
+    } else {
+      // Body
+      ctx.fillStyle = colors.snake;
+      ctx.shadowColor = 'rgba(0, 217, 255, 0.5)';
+      ctx.shadowBlur = 5;
+    }
+    
+    ctx.fillRect(
+      segment.x * gridSize + 1,
+      segment.y * gridSize + 1,
+      gridSize - 2,
+      gridSize - 2
+    );
+  });
+  ctx.shadowColor = 'transparent';
+}
+
+function drawFood() {
+  ctx.fillStyle = colors.food;
+  ctx.shadowColor = 'rgba(255, 215, 0, 0.8)';
+  ctx.shadowBlur = 10;
+  ctx.beginPath();
+  ctx.arc(
+    food.x * gridSize + gridSize / 2,
+    food.y * gridSize + gridSize / 2,
+    gridSize / 2 - 2,
+    0,
+    Math.PI * 2
+  );
+  ctx.fill();
+  ctx.shadowColor = 'transparent';
+}
+
+function update() {
+  if (!gameActive) return;
+  
+  const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+  
+  // Wrap around edges
+  head.x = (head.x + tileCount) % tileCount;
+  head.y = (head.y + tileCount) % tileCount;
+  
+  // Check collision with self
+  if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+    resetGame();
+    return;
+  }
+  
+  snake.unshift(head);
+  
+  // Check food collision
+  if (head.x === food.x && head.y === food.y) {
+    score++;
+    spawnFood();
+  } else {
+    snake.pop();
+  }
+}
+
+function spawnFood() {
+  food = {
+    x: Math.floor(Math.random() * tileCount),
+    y: Math.floor(Math.random() * tileCount)
+  };
+  
+  // Ensure food doesn't spawn on snake
+  if (snake.some(segment => segment.x === food.x && segment.y === food.y)) {
+    spawnFood();
+  }
+}
+
+function resetGame() {
+  snake = [{x: 5, y: 5}];
+  dx = 1;
+  dy = 0;
+  score = 0;
+}
+
+function drawScore() {
+  ctx.fillStyle = colors.text;
+  ctx.font = 'bold 16px Courier New';
+  ctx.fillText(`Score: ${score}`, 10, 25);
+  ctx.fillText(`🐍 Kaggle Activity Tracker`, canvas.width - 220, 25);
+}
+
+function gameLoop() {
+  update();
+  drawGrid();
+  drawSnake();
+  drawFood();
+  drawScore();
+  setTimeout(gameLoop, 100);
+}
+
+// Keyboard controls
+document.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'ArrowUp':
+      if (dy === 0) { dx = 0; dy = -1; }
+      break;
+    case 'ArrowDown':
+      if (dy === 0) { dx = 0; dy = 1; }
+      break;
+    case 'ArrowLeft':
+      if (dx === 0) { dx = -1; dy = 0; }
+      break;
+    case 'ArrowRight':
+      if (dx === 0) { dx = 1; dy = 0; }
+      break;
+  }
+});
+
+// Start the game
+spawnFood();
+gameLoop();
+</script>
+
+<p style="color: #888; font-size: 12px; margin-top: 15px;">
+  Use <b>Arrow Keys</b> to control the snake • Eat the gold dots 🟡 to grow • Represents activity surge during peak months
+</p>
 
 ---
 
@@ -195,5 +365,4 @@ May   Jun   Jul   Aug   Sep   Oct   Nov   Dec   Jan   Feb   Mar   Apr
 </div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,100:000000&height=80&section=footer"/>
-
 
