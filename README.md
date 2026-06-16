@@ -1,12 +1,13 @@
+
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&font=Raleway"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Teaching%20Machines%20to%20See&descAlignY=60&descColor=00D9FF"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+Specialist;ML+%26+NLP+Enthusiast;Kaggle+Datasets+Grandmaster" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+%7C+Machine+Learning+%7C+NLP;Kaggle+Datasets+Grandmaster+%26+Notebooks+Master;Projects+in+progress%2C+career+loading...+%F0%9F%9A%80" alt="Typing SVG" />
 
 <br/>
 
-![Profile Views](https://komarev.com/ghpvc/?username=Ahsan-Neural&color=00d9ff&style=flat-square&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=ahsanneural&color=00d9ff&style=flat-square&label=Profile+Views)
 [![Kaggle](https://img.shields.io/badge/Kaggle-ahsanneural-20BEFF?style=flat-square&logo=kaggle&logoColor=white)](https://www.kaggle.com/ahsanneural)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Muhammad%20Ahsan-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-ahsan-7b10073b5/)
 
@@ -59,7 +60,6 @@
 **Languages**
 
 ![Python](https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=00D9FF)
-![C#](https://img.shields.io/badge/C%23-0D1117?style=for-the-badge&logo=csharp&logoColor=00D9FF)
 ![SQL](https://img.shields.io/badge/SQL-0D1117?style=for-the-badge&logo=mysql&logoColor=00D9FF)
 ![VBA](https://img.shields.io/badge/VBA-0D1117?style=for-the-badge&logo=microsoft-excel&logoColor=217346)
 
@@ -72,14 +72,12 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-0D1117?style=for-the-badge&logo=scikitlearn&logoColor=F7931E)
 ![Pandas](https://img.shields.io/badge/Pandas-0D1117?style=for-the-badge&logo=pandas&logoColor=150458)
 ![NumPy](https://img.shields.io/badge/NumPy-0D1117?style=for-the-badge&logo=numpy&logoColor=013243)
-![YOLO](https://img.shields.io/badge/YOLOv8-0D1117?style=for-the-badge&logo=opencv&logoColor=00D9FF)
 
 **Tools & Platforms**
 
 ![React](https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-0D1117?style=for-the-badge&logo=vite&logoColor=646CFF)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-0D1117?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
-![Streamlit](https://img.shields.io/badge/Streamlit-0D1117?style=for-the-badge&logo=streamlit&logoColor=FF4B4B)
 ![GitHub](https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=ffffff)
 ![Kaggle](https://img.shields.io/badge/Kaggle-0D1117?style=for-the-badge&logo=kaggle&logoColor=20BEFF)
 ![Google Colab](https://img.shields.io/badge/Colab-0D1117?style=for-the-badge&logo=googlecolab&logoColor=F9AB00)
@@ -130,59 +128,49 @@
 
 <div align="center">
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/Ahsan-Neural/Ahsan-Neural/output/github-contribution-grid-snake-dark.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/Ahsan-Neural/Ahsan-Neural/output/github-contribution-grid-snake.svg"
-  />
-  <img
-    alt="🐍 Snake eating my GitHub contribution dots"
-    src="https://raw.githubusercontent.com/Ahsan-Neural/Ahsan-Neural/output/github-contribution-grid-snake.svg"
-  />
-</picture>
+```
+May   Jun   Jul   Aug   Sep   Oct   Nov   Dec   Jan   Feb   Mar   Apr
+·  ·  ·  ·  ·  ·  ●  ·  ·  ·  ·  ●  ·  ●  ●  ●●●●  ●●●●  ●●●●  ●●●●  ●  ·
+·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ●  ·  ·  ·  ●●●●  ●●●●  ●●●●  ●●●●  ●●●  ·  ·
+·  ·  ·  ·  ●  ·  ●  ·  ·  ●  ●  ·  ·  ●●●●  ●●●●  ●●●●  ●●●●  ●●●●  ·  ·  ·
+```
 
-<br/>
-
-<sub>🐍 <b>Snake eating through my contribution dots</b> &nbsp;·&nbsp; Peak activity: <b>Dec 2025 – Mar 2026</b> &nbsp;·&nbsp; Auto-updates every 12 hours</sub>
+> Peak activity: **December 2025 — March 2026**
 
 </div>
 
 ---
 
-## Featured Kaggle Datasets
+## Featured Kaggle Projects
 
 <table>
 <tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/global-food-nutrition-database-2026">Global Food & Nutrition Database 2026</a></b><br/><sub>Machine Learning · Health</sub></td>
-<td>45,000+ foods with Nutri-Score, allergens, health scores & full nutrition facts</td>
-</tr>
-<tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/future-jobs-skills-demand-2025">Future Jobs & Skills Demand 2025</a></b><br/><sub>Data Analysis · Career</sub></td>
-<td>In-demand roles, skills gap analysis and salary trends across industries</td>
-</tr>
-<tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/nasa-astronomy-picture-of-the-day-1995-2026">NASA Astronomy Picture of the Day (1995–2026)</a></b><br/><sub>NLP · Computer Vision</sub></td>
-<td>30+ years of APOD entries — 11,186 records for NLP & image research</td>
-</tr>
-<tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/pakistan-air-quality-weather-10-cities">Pakistan Air Quality & Weather (10 Cities)</a></b><br/><sub>Data Science · Environmental</sub></td>
+<td><b>Pakistan Air Quality & Weather — 10 Cities</b><br/><sub>Data Science · Environmental</sub></td>
 <td>Hourly PM2.5, PM10, CO, NO2, O3 & weather data across major Pakistani cities</td>
 </tr>
 <tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/rare-neurological-diseases-mri-curated-edition">Rare Neurological Diseases MRI — Curated Edition</a></b><br/><sub>Computer Vision · Medical AI</sub></td>
+<td><b>NASA Astronomy Picture of the Day (1995–2026)</b><br/><sub>NLP · Computer Vision</sub></td>
+<td>30+ years of APOD entries — 11,186 records for NLP & image research</td>
+</tr>
+<tr>
+<td><b>Rare Neurological Diseases MRI — Curated Edition</b><br/><sub>Computer Vision · Medical AI</sub></td>
 <td>2,000 curated MRI scans across 5 rare diseases, train/val/test splits included</td>
 </tr>
 <tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/tech-layoffs-hiring-trends-2025-2026">Tech Layoffs & Hiring Trends 2025–2026</a></b><br/><sub>Data Analysis · NLP</sub></td>
+<td><b>Global Food & Nutrition Database 2026</b><br/><sub>Machine Learning · Health</sub></td>
+<td>45,000+ foods with Nutri-Score, allergens, health scores & full nutrition facts</td>
+</tr>
+<tr>
+<td><b>Tech Layoffs & Hiring Trends 2025–2026</b><br/><sub>Data Analysis · NLP</sub></td>
 <td>153K+ layoffs with AI impact analysis, 2K new tech roles & salary data</td>
 </tr>
 <tr>
-<td><b><a href="https://www.kaggle.com/datasets/ahsanneural/microplastics-food-to-human-bloodstream">Microplastics: Food to Human Bloodstream</a></b><br/><sub>Health · Data Science</sub></td>
-<td>Microplastic concentration data from food sources through to human bloodstream</td>
+<td><b>AI-Generated vs Human-Written Code</b><br/><sub>NLP · Classification</sub></td>
+<td>Python code classification dataset comparing AI-style vs human-style coding</td>
+</tr>
+<tr>
+<td><b>Customer Segmentation with K-Means</b><br/><sub>Machine Learning · Clustering</sub></td>
+<td>End-to-end notebook on clustering customers using K-Means with full EDA</td>
 </tr>
 </table>
 
