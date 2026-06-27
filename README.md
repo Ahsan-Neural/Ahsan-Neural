@@ -20,7 +20,7 @@
 ```txt
 ╔══════════════════════════════════════════════════════╗
 ║  Degree   :  BS Artificial Intelligence              ║
-║  Location :  Rahim Yar Khan, Punjab, Pakistan        ║
+║  Location :  Punjab, Pakistan                        ║
 ║  Focus    :  Computer Vision · ML · NLP              ║
 ║  Kaggle   :  Datasets Grandmaster + Notebooks Master ║
 ║  Motto    :  Teaching machines to see                ║
