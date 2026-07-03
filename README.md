@@ -1,9 +1,9 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Teaching%20Machines%20to%20See&descAlignY=60&descColor=00D9FF"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:00D9FF&height=120&section=header&text=Muhammad%20Ahsan&fontSize=40&fontColor=ffffff&animation=fadeIn&font=raleway"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+%7C+Machine+Learning+%7C+NLP;Kaggle+Datasets+Grandmaster+%26+Notebooks+Master;Projects+in+progress%2C+career+loading...+%F0%9F%9A%80" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D9FF&center=true&vCenter=true&width=750&lines=BS+Artificial+Intelligence+Student;Computer+Vision+%7C+ML+%7C+NLP;Problem+Solver+%7C+Tech+Enthusiast;Let's+Build+Intelligence" alt="Typing SVG" />
 
 <br/>
 
@@ -183,6 +183,14 @@ May   Jun   Jul   Aug   Sep   Oct   Nov   Dec   Jan   Feb   Mar   Apr
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=0077B5)](https://www.linkedin.com/in/muhammad-ahsan-7b10073b5/)
 [![Kaggle](https://img.shields.io/badge/Kaggle-0D1117?style=for-the-badge&logo=kaggle&logoColor=20BEFF)](https://www.kaggle.com/ahsanneural)
 [![Gmail](https://img.shields.io/badge/Gmail-0D1117?style=for-the-badge&logo=gmail&logoColor=D14836)](mailto:ahsanatwork24@gmail.com)
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="./assets/batman-dev.png" width="700" alt="Batman coding setup"/>
 
 </div>
 
