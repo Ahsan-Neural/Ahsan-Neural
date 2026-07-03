@@ -190,16 +190,13 @@ May   Jun   Jul   Aug   Sep   Oct   Nov   Dec   Jan   Feb   Mar   Apr
 
 <div align="center">
 
-<img src="./assets/batman-dev.png" width="700" alt="Batman coding setup"/>
+<img src="https://github.com/user-attachments/assets/e0aad912-a053-47f0-a3c2-d02d45d76247" width="700" alt="Batman coding setup"/>
 
 </div>
 
----
 
-<div align="center">
 
-*"Teaching machines to see. BS AI student | Computer Vision | ML | NLP | Projects in progress, career loading."*
 
-</div>
+
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,100:000000&height=80&section=footer"/>
