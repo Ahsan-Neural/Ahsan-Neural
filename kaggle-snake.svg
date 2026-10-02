@@ -1,0 +1,363 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+
+    <!-- Snake Body Gradient -->
+    <linearGradient id="snakeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.1" />
+      <stop offset="30%" stop-color="#00D9FF" stop-opacity="0.8" />
+      <stop offset="85%" stop-color="#79EDFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4.5" result="blur1" />
+      <feGaussianBlur stdDeviation="2" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .retro-font {
+      font-family: 'Courier New', Courier, monospace, 'Fira Code', 'Segoe UI', monospace;
+      font-weight: 700;
+    }
+
+    .snake-body {
+      stroke-dasharray: 100 2280;
+      animation: snakeSlither 16s linear infinite;
+    }
+
+    @keyframes snakeSlither {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: -2280; }
+    }
+  </style>
+
+  <!-- Arcade Outer Frame -->
+  <rect x="2" y="2" width="846" height="256" rx="12" fill="url(#bgGrad)" stroke="#30363D" stroke-width="2" />
+  <rect x="10" y="10" width="830" height="240" rx="8" fill="#080c10" stroke="#00D9FF" stroke-opacity="0.25" stroke-width="1.5" />
+
+  <!-- CRT Scanline Animation -->
+  <line x1="12" y1="12" x2="838" y2="12" stroke="#00D9FF" stroke-opacity="0.06" stroke-width="2">
+    <animate attributeName="y1" values="12;248;12" dur="6s" repeatCount="indefinite" />
+    <animate attributeName="y2" values="12;248;12" dur="6s" repeatCount="indefinite" />
+  </line>
+
+  <!-- Arcade Top HUD -->
+  <g class="retro-font">
+    <text x="30" y="36" fill="#00D9FF" font-size="12" letter-spacing="1">KAGGLE ARCADE : QUEST</text>
+    <text x="250" y="36" fill="#8B949E" font-size="11">PLAYER: <tspan fill="#FFFFFF">AHSAN</tspan> <tspan fill="#FFD700">[RANK 7]</tspan></text>
+    <text x="500" y="36" fill="#8B949E" font-size="11">STAGE: <tspan fill="#00D9FF">GRANDMASTER</tspan></text>
+    <text x="680" y="36" fill="#FFD700" font-size="12" letter-spacing="1">SCORE: 12,700</text>
+  </g>
+
+  <line x1="25" y1="46" x2="825" y2="46" stroke="#21262D" stroke-width="1" />
+
+  <!-- Month Axis Labels -->
+  <g class="retro-font" fill="#6E7681" font-size="9">
+    <text x="65" y="60">May</text>
+    <text x="125" y="60">Jun</text>
+    <text x="185" y="60">Jul</text>
+    <text x="245" y="60">Aug</text>
+    <text x="305" y="60">Sep</text>
+    <text x="365" y="60">Oct</text>
+    <text x="425" y="60">Nov</text>
+    <text x="485" y="60">Dec</text>
+    <text x="545" y="60">Jan</text>
+    <text x="605" y="60">Feb</text>
+    <text x="665" y="60">Mar</text>
+    <text x="725" y="60">Apr</text>
+  </g>
+
+  <!-- Activity Grid -->
+  <g id="gridMatrix">
+
+    <!-- Row 0 Background Cells -->
+    <g fill="#161B22">
+      <!-- Inactive grid tiles across all 48 weeks -->
+      <rect x="65" y="72" width="11" height="11" rx="2"/><rect x="80" y="72" width="11" height="11" rx="2"/><rect x="95" y="72" width="11" height="11" rx="2"/><rect x="110" y="72" width="11" height="11" rx="2"/><rect x="125" y="72" width="11" height="11" rx="2"/><rect x="140" y="72" width="11" height="11" rx="2"/><rect x="155" y="72" width="11" height="11" rx="2"/><rect x="170" y="72" width="11" height="11" rx="2"/><rect x="185" y="72" width="11" height="11" rx="2"/><rect x="200" y="72" width="11" height="11" rx="2"/><rect x="215" y="72" width="11" height="11" rx="2"/><rect x="230" y="72" width="11" height="11" rx="2"/><rect x="245" y="72" width="11" height="11" rx="2"/><rect x="260" y="72" width="11" height="11" rx="2"/><rect x="275" y="72" width="11" height="11" rx="2"/><rect x="290" y="72" width="11" height="11" rx="2"/><rect x="305" y="72" width="11" height="11" rx="2"/><rect x="320" y="72" width="11" height="11" rx="2"/><rect x="335" y="72" width="11" height="11" rx="2"/><rect x="350" y="72" width="11" height="11" rx="2"/><rect x="365" y="72" width="11" height="11" rx="2"/><rect x="380" y="72" width="11" height="11" rx="2"/><rect x="395" y="72" width="11" height="11" rx="2"/><rect x="410" y="72" width="11" height="11" rx="2"/><rect x="425" y="72" width="11" height="11" rx="2"/><rect x="440" y="72" width="11" height="11" rx="2"/><rect x="455" y="72" width="11" height="11" rx="2"/><rect x="470" y="72" width="11" height="11" rx="2"/><rect x="485" y="72" width="11" height="11" rx="2"/><rect x="500" y="72" width="11" height="11" rx="2"/><rect x="515" y="72" width="11" height="11" rx="2"/><rect x="530" y="72" width="11" height="11" rx="2"/><rect x="545" y="72" width="11" height="11" rx="2"/><rect x="560" y="72" width="11" height="11" rx="2"/><rect x="575" y="72" width="11" height="11" rx="2"/><rect x="590" y="72" width="11" height="11" rx="2"/><rect x="605" y="72" width="11" height="11" rx="2"/><rect x="620" y="72" width="11" height="11" rx="2"/><rect x="635" y="72" width="11" height="11" rx="2"/><rect x="650" y="72" width="11" height="11" rx="2"/><rect x="665" y="72" width="11" height="11" rx="2"/><rect x="680" y="72" width="11" height="11" rx="2"/><rect x="695" y="72" width="11" height="11" rx="2"/><rect x="710" y="72" width="11" height="11" rx="2"/><rect x="725" y="72" width="11" height="11" rx="2"/><rect x="740" y="72" width="11" height="11" rx="2"/><rect x="755" y="72" width="11" height="11" rx="2"/><rect x="770" y="72" width="11" height="11" rx="2"/>
+
+      <!-- Row 1 Base Tiles -->
+      <rect x="65" y="87" width="11" height="11" rx="2"/><rect x="80" y="87" width="11" height="11" rx="2"/><rect x="95" y="87" width="11" height="11" rx="2"/><rect x="110" y="87" width="11" height="11" rx="2"/><rect x="125" y="87" width="11" height="11" rx="2"/><rect x="140" y="87" width="11" height="11" rx="2"/><rect x="155" y="87" width="11" height="11" rx="2"/><rect x="170" y="87" width="11" height="11" rx="2"/><rect x="185" y="87" width="11" height="11" rx="2"/><rect x="200" y="87" width="11" height="11" rx="2"/><rect x="215" y="87" width="11" height="11" rx="2"/><rect x="230" y="87" width="11" height="11" rx="2"/><rect x="245" y="87" width="11" height="11" rx="2"/><rect x="260" y="87" width="11" height="11" rx="2"/><rect x="275" y="87" width="11" height="11" rx="2"/><rect x="290" y="87" width="11" height="11" rx="2"/><rect x="305" y="87" width="11" height="11" rx="2"/><rect x="320" y="87" width="11" height="11" rx="2"/><rect x="335" y="87" width="11" height="11" rx="2"/><rect x="350" y="87" width="11" height="11" rx="2"/><rect x="365" y="87" width="11" height="11" rx="2"/><rect x="380" y="87" width="11" height="11" rx="2"/><rect x="395" y="87" width="11" height="11" rx="2"/><rect x="410" y="87" width="11" height="11" rx="2"/><rect x="425" y="87" width="11" height="11" rx="2"/><rect x="440" y="87" width="11" height="11" rx="2"/><rect x="455" y="87" width="11" height="11" rx="2"/><rect x="470" y="87" width="11" height="11" rx="2"/>
+
+      <!-- Row 2 Base Tiles -->
+      <rect x="65" y="102" width="11" height="11" rx="2"/><rect x="80" y="102" width="11" height="11" rx="2"/><rect x="95" y="102" width="11" height="11" rx="2"/><rect x="110" y="102" width="11" height="11" rx="2"/><rect x="125" y="102" width="11" height="11" rx="2"/><rect x="140" y="102" width="11" height="11" rx="2"/><rect x="155" y="102" width="11" height="11" rx="2"/><rect x="170" y="102" width="11" height="11" rx="2"/><rect x="185" y="102" width="11" height="11" rx="2"/><rect x="200" y="102" width="11" height="11" rx="2"/><rect x="215" y="102" width="11" height="11" rx="2"/><rect x="230" y="102" width="11" height="11" rx="2"/><rect x="245" y="102" width="11" height="11" rx="2"/><rect x="260" y="102" width="11" height="11" rx="2"/><rect x="275" y="102" width="11" height="11" rx="2"/><rect x="290" y="102" width="11" height="11" rx="2"/><rect x="305" y="102" width="11" height="11" rx="2"/><rect x="320" y="102" width="11" height="11" rx="2"/><rect x="335" y="102" width="11" height="11" rx="2"/><rect x="350" y="102" width="11" height="11" rx="2"/><rect x="365" y="102" width="11" height="11" rx="2"/><rect x="380" y="102" width="11" height="11" rx="2"/><rect x="395" y="102" width="11" height="11" rx="2"/><rect x="410" y="102" width="11" height="11" rx="2"/><rect x="425" y="102" width="11" height="11" rx="2"/><rect x="440" y="102" width="11" height="11" rx="2"/><rect x="455" y="102" width="11" height="11" rx="2"/><rect x="470" y="102" width="11" height="11" rx="2"/>
+
+      <!-- Row 3 Base Tiles -->
+      <rect x="65" y="117" width="11" height="11" rx="2"/><rect x="80" y="117" width="11" height="11" rx="2"/><rect x="95" y="117" width="11" height="11" rx="2"/><rect x="110" y="117" width="11" height="11" rx="2"/><rect x="125" y="117" width="11" height="11" rx="2"/><rect x="140" y="117" width="11" height="11" rx="2"/><rect x="155" y="117" width="11" height="11" rx="2"/><rect x="170" y="117" width="11" height="11" rx="2"/><rect x="185" y="117" width="11" height="11" rx="2"/><rect x="200" y="117" width="11" height="11" rx="2"/><rect x="215" y="117" width="11" height="11" rx="2"/><rect x="230" y="117" width="11" height="11" rx="2"/><rect x="245" y="117" width="11" height="11" rx="2"/><rect x="260" y="117" width="11" height="11" rx="2"/><rect x="275" y="117" width="11" height="11" rx="2"/><rect x="290" y="117" width="11" height="11" rx="2"/><rect x="305" y="117" width="11" height="11" rx="2"/><rect x="320" y="117" width="11" height="11" rx="2"/><rect x="335" y="117" width="11" height="11" rx="2"/><rect x="350" y="117" width="11" height="11" rx="2"/><rect x="365" y="117" width="11" height="11" rx="2"/><rect x="380" y="117" width="11" height="11" rx="2"/><rect x="395" y="117" width="11" height="11" rx="2"/><rect x="410" y="117" width="11" height="11" rx="2"/><rect x="425" y="117" width="11" height="11" rx="2"/><rect x="440" y="117" width="11" height="11" rx="2"/><rect x="455" y="117" width="11" height="11" rx="2"/><rect x="470" y="117" width="11" height="11" rx="2"/>
+
+      <!-- Row 4 Base Tiles -->
+      <rect x="65" y="132" width="11" height="11" rx="2"/><rect x="80" y="132" width="11" height="11" rx="2"/><rect x="95" y="132" width="11" height="11" rx="2"/><rect x="110" y="132" width="11" height="11" rx="2"/><rect x="125" y="132" width="11" height="11" rx="2"/><rect x="140" y="132" width="11" height="11" rx="2"/><rect x="155" y="132" width="11" height="11" rx="2"/><rect x="170" y="132" width="11" height="11" rx="2"/><rect x="185" y="132" width="11" height="11" rx="2"/><rect x="200" y="132" width="11" height="11" rx="2"/><rect x="215" y="132" width="11" height="11" rx="2"/><rect x="230" y="132" width="11" height="11" rx="2"/><rect x="245" y="132" width="11" height="11" rx="2"/><rect x="260" y="132" width="11" height="11" rx="2"/><rect x="275" y="132" width="11" height="11" rx="2"/><rect x="290" y="132" width="11" height="11" rx="2"/><rect x="305" y="132" width="11" height="11" rx="2"/><rect x="320" y="132" width="11" height="11" rx="2"/><rect x="335" y="132" width="11" height="11" rx="2"/><rect x="350" y="132" width="11" height="11" rx="2"/><rect x="365" y="132" width="11" height="11" rx="2"/><rect x="380" y="132" width="11" height="11" rx="2"/><rect x="395" y="132" width="11" height="11" rx="2"/><rect x="410" y="132" width="11" height="11" rx="2"/><rect x="425" y="132" width="11" height="11" rx="2"/><rect x="440" y="132" width="11" height="11" rx="2"/><rect x="455" y="132" width="11" height="11" rx="2"/><rect x="470" y="132" width="11" height="11" rx="2"/>
+
+      <!-- Row 5 Base Tiles -->
+      <rect x="65" y="147" width="11" height="11" rx="2"/><rect x="80" y="147" width="11" height="11" rx="2"/><rect x="95" y="147" width="11" height="11" rx="2"/><rect x="110" y="147" width="11" height="11" rx="2"/><rect x="125" y="147" width="11" height="11" rx="2"/><rect x="140" y="147" width="11" height="11" rx="2"/><rect x="155" y="147" width="11" height="11" rx="2"/><rect x="170" y="147" width="11" height="11" rx="2"/><rect x="185" y="147" width="11" height="11" rx="2"/><rect x="200" y="147" width="11" height="11" rx="2"/><rect x="215" y="147" width="11" height="11" rx="2"/><rect x="230" y="147" width="11" height="11" rx="2"/><rect x="245" y="147" width="11" height="11" rx="2"/><rect x="260" y="147" width="11" height="11" rx="2"/><rect x="275" y="147" width="11" height="11" rx="2"/><rect x="290" y="147" width="11" height="11" rx="2"/><rect x="305" y="147" width="11" height="11" rx="2"/><rect x="320" y="147" width="11" height="11" rx="2"/><rect x="335" y="147" width="11" height="11" rx="2"/><rect x="350" y="147" width="11" height="11" rx="2"/><rect x="365" y="147" width="11" height="11" rx="2"/><rect x="380" y="147" width="11" height="11" rx="2"/><rect x="395" y="147" width="11" height="11" rx="2"/><rect x="410" y="147" width="11" height="11" rx="2"/><rect x="425" y="147" width="11" height="11" rx="2"/><rect x="440" y="147" width="11" height="11" rx="2"/><rect x="455" y="147" width="11" height="11" rx="2"/><rect x="470" y="147" width="11" height="11" rx="2"/>
+
+      <!-- Row 6 Base Tiles -->
+      <rect x="65" y="162" width="11" height="11" rx="2"/><rect x="80" y="162" width="11" height="11" rx="2"/><rect x="95" y="162" width="11" height="11" rx="2"/><rect x="110" y="162" width="11" height="11" rx="2"/><rect x="125" y="162" width="11" height="11" rx="2"/><rect x="140" y="162" width="11" height="11" rx="2"/><rect x="155" y="162" width="11" height="11" rx="2"/><rect x="170" y="162" width="11" height="11" rx="2"/><rect x="185" y="162" width="11" height="11" rx="2"/><rect x="200" y="162" width="11" height="11" rx="2"/><rect x="215" y="162" width="11" height="11" rx="2"/><rect x="230" y="162" width="11" height="11" rx="2"/><rect x="245" y="162" width="11" height="11" rx="2"/><rect x="260" y="162" width="11" height="11" rx="2"/><rect x="275" y="162" width="11" height="11" rx="2"/><rect x="290" y="162" width="11" height="11" rx="2"/><rect x="305" y="162" width="11" height="11" rx="2"/><rect x="320" y="162" width="11" height="11" rx="2"/><rect x="335" y="162" width="11" height="11" rx="2"/><rect x="350" y="162" width="11" height="11" rx="2"/><rect x="365" y="162" width="11" height="11" rx="2"/><rect x="380" y="162" width="11" height="11" rx="2"/><rect x="395" y="162" width="11" height="11" rx="2"/><rect x="410" y="162" width="11" height="11" rx="2"/><rect x="425" y="162" width="11" height="11" rx="2"/><rect x="440" y="162" width="11" height="11" rx="2"/><rect x="455" y="162" width="11" height="11" rx="2"/><rect x="470" y="162" width="11" height="11" rx="2"/><rect x="485" y="162" width="11" height="11" rx="2"/><rect x="500" y="162" width="11" height="11" rx="2"/><rect x="515" y="162" width="11" height="11" rx="2"/><rect x="530" y="162" width="11" height="11" rx="2"/><rect x="545" y="162" width="11" height="11" rx="2"/><rect x="560" y="162" width="11" height="11" rx="2"/><rect x="575" y="162" width="11" height="11" rx="2"/><rect x="590" y="162" width="11" height="11" rx="2"/><rect x="605" y="162" width="11" height="11" rx="2"/><rect x="620" y="162" width="11" height="11" rx="2"/><rect x="635" y="162" width="11" height="11" rx="2"/><rect x="650" y="162" width="11" height="11" rx="2"/><rect x="665" y="162" width="11" height="11" rx="2"/><rect x="680" y="162" width="11" height="11" rx="2"/><rect x="695" y="162" width="11" height="11" rx="2"/><rect x="710" y="162" width="11" height="11" rx="2"/><rect x="725" y="162" width="11" height="11" rx="2"/><rect x="740" y="162" width="11" height="11" rx="2"/><rect x="755" y="162" width="11" height="11" rx="2"/><rect x="770" y="162" width="11" height="11" rx="2"/>
+    </g>
+
+    <!-- ACTIVE KAGGLE DAYS (Eaten in real-time as snake slithers over them) -->
+    <!-- ROW 1 (Swept Left to Right by Snake, t = 0.185 to 0.280) -->
+    <!-- Active Days: Dec -> Jan -> Feb -> Mar -->
+    <rect x="485" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.185;0.190;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.185;0.190;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="500" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.191;0.196;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.191;0.196;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="530" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.204;0.209;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.204;0.209;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Gold Pellet in Row 1 -->
+    <rect x="545" y="87" width="11" height="11" rx="2" fill="#FFD700" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#FFD700;#FFD700;#161B22;#161B22;#FFD700" keyTimes="0;0.210;0.215;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.210;0.215;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.216;0.221;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.216;0.221;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="590" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.229;0.234;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.229;0.234;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="605" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.235;0.240;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.235;0.240;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="620" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.241;0.246;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.241;0.246;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="650" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.254;0.259;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.254;0.259;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="665" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.260;0.265;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.260;0.265;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="680" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.266;0.271;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.266;0.271;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="710" y="87" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.279;0.284;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.279;0.284;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ROW 2 (Swept Right to Left by Snake, t = 0.286 to 0.380) -->
+    <rect x="710" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.288;0.293;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.288;0.293;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="695" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.294;0.299;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.294;0.299;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="665" y="102" width="11" height="11" rx="2" fill="#FFD700" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#FFD700;#FFD700;#161B22;#161B22;#FFD700" keyTimes="0;0.306;0.311;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.306;0.311;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="650" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.312;0.317;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.312;0.317;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="620" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.325;0.330;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.325;0.330;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="605" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.331;0.336;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.331;0.336;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="575" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.343;0.348;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.343;0.348;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="545" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.355;0.360;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.355;0.360;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="515" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.367;0.372;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.367;0.372;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="485" y="102" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.378;0.383;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.378;0.383;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ROW 3 (Swept Left to Right by Snake, t = 0.387 to 0.481) -->
+    <rect x="485" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.389;0.394;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.389;0.394;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="515" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.401;0.406;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.401;0.406;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="545" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.413;0.418;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.413;0.418;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="117" width="11" height="11" rx="2" fill="#FFD700" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#FFD700;#FFD700;#161B22;#161B22;#FFD700" keyTimes="0;0.419;0.424;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.419;0.424;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="590" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.432;0.437;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.432;0.437;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="620" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.444;0.449;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.444;0.449;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="650" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.456;0.461;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.456;0.461;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="680" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.468;0.473;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.468;0.473;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="710" y="117" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.480;0.485;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.480;0.485;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ROW 4 (Swept Right to Left by Snake, t = 0.488 to 0.582) -->
+    <rect x="710" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.490;0.495;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.490;0.495;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="680" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.502;0.507;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.502;0.507;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="650" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.514;0.519;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.514;0.519;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="620" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.526;0.531;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.526;0.531;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="575" y="132" width="11" height="11" rx="2" fill="#FFD700" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#FFD700;#FFD700;#161B22;#161B22;#FFD700" keyTimes="0;0.544;0.549;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.544;0.549;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="545" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.556;0.561;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.556;0.561;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="515" y="132" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.568;0.573;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.568;0.573;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- ROW 5 (Swept Left to Right by Snake, t = 0.588 to 0.683) -->
+    <rect x="485" y="147" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.590;0.595;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.590;0.595;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="530" y="147" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.608;0.613;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.608;0.613;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="560" y="147" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.621;0.626;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.621;0.626;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="605" y="147" width="11" height="11" rx="2" fill="#FFD700" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#FFD700;#FFD700;#161B22;#161B22;#FFD700" keyTimes="0;0.639;0.644;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.639;0.644;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="650" y="147" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.657;0.662;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.657;0.662;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="695" y="147" width="11" height="11" rx="2" fill="#00D9FF" filter="url(#neonGlow)">
+      <animate attributeName="fill" values="#00D9FF;#00D9FF;#161B22;#161B22;#00D9FF" keyTimes="0;0.675;0.680;0.94;1" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0.2;0.2;1" keyTimes="0;0.675;0.680;0.94;1" dur="16s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Sporadic Earlier Workdays (Jul, Sep, Oct, Nov) -->
+    <rect x="185" y="102" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+    <rect x="215" y="147" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+    <rect x="335" y="132" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+    <rect x="380" y="117" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+    <rect x="410" y="162" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+    <rect x="440" y="102" width="11" height="11" rx="2" fill="#0088A3" opacity="0.8"/>
+
+  </g>
+
+  <!-- THE GLOWING SNAKE (Exact Synchronized Path) -->
+  <path id="snakePath" d="
+    M 65,77.5 
+    H 475.5 
+    V 92.5 
+    H 715.5 
+    V 107.5 
+    H 485.5 
+    V 122.5 
+    H 715.5 
+    V 137.5 
+    H 485.5 
+    V 152.5 
+    H 715.5 
+    V 68 
+    H 65 
+    V 77.5
+  " 
+  fill="none" 
+  stroke="url(#snakeGrad)" 
+  stroke-width="11" 
+  stroke-linecap="round" 
+  stroke-linejoin="round"
+  class="snake-body" 
+  filter="url(#intenseGlow)"
+  />
+
+  <!-- Arcade Bottom HUD -->
+  <line x1="25" y1="205" x2="825" y2="205" stroke="#21262D" stroke-width="1" />
+
+  <g class="retro-font">
+    <text x="35" y="232" fill="#8B949E" font-size="11">DATASETS :</text>
+    
+    <!-- Medal Counts (No Emojis) -->
+    <text x="120" y="232" fill="#FFD700" font-size="11">GOLD x8</text>
+    <text x="180" y="232" fill="#8B949E" font-size="11">|</text>
+    <text x="195" y="232" fill="#C0C0C0" font-size="11">SILVER x7</text>
+    <text x="268" y="232" fill="#8B949E" font-size="11">|</text>
+    <text x="283" y="232" fill="#CD7F32" font-size="11">BRONZE x2</text>
+
+    <!-- Notebooks -->
+    <text x="380" y="232" font-size="11" fill="#8B949E">NOTEBOOKS : <tspan fill="#C0C0C0">SILVER x11</tspan> | <tspan fill="#CD7F32">BRONZE x18</tspan></text>
+
+    <!-- Multiplier / Status -->
+    <text x="660" y="232" fill="#00D9FF" font-size="11">MULTIPLIER: <tspan fill="#FFFFFF">25x DATASETS</tspan></text>
+  </g>
+</svg>
